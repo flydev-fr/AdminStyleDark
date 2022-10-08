@@ -10,7 +10,7 @@ class AdminStyleDark extends WireData implements Module {
   public static function getModuleInfo() {
     return [
       'title' => 'AdminStyleDark',
-      'version' => '1.0.5',
+      'version' => '1.0.0',
       'summary' => 'Dark Style for AdminThemeUikit',
       'autoload' => true,
       'singular' => true,
