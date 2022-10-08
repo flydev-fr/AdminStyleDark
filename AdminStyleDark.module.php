@@ -1,11 +1,10 @@
 <?php namespace ProcessWire;
-/**
- * Based on Bernhard Baumrock `AdminStyleRock` module (https://github.com/baumrock/AdminStyleRock)
- */
+
+require_once wire('config')->paths->siteModules . "Less/AdminStyle.php";
+
 class AdminStyleDark extends WireData implements Module {
 
-  public $logo;
-  public $rockprimary;
+  use AdminStyle;
 
   public static function getModuleInfo() {
     return [
@@ -17,7 +16,7 @@ class AdminStyleDark extends WireData implements Module {
       'icon' => 'moon-o',
       'requires' => [
         'ProcessWire>=3.0.178',
-        'Less',
+        'Less>=4',
       ],
       'installs' => [
       ],
@@ -25,32 +24,6 @@ class AdminStyleDark extends WireData implements Module {
   }
 
   public function ready() {
-    // do everything below only on admin pages
-    if($this->wire->page->template != 'admin') return;
-
-    $config = $this->wire()->config;
-    $min = !$config->debug;
-
-    $style = $config->paths($this)."styles/dark.less";
-    $compiled = $config->paths->assets."admin";
-    if($min) $compiled .= ".min.css";
-    else $compiled .= ".css";
-
-    // prepare less vars
-    $vars = [];
-
-    $config->AdminThemeUikit = [
-      'style' => $style,
-      'compress' => $min,
-      'customCssFile' => $compiled,
-      'recompile' => @(filemtime($style) > filemtime($compiled)),
-      'vars' => $vars,
-    ];
-  }
-
-  public function addDarkStyles(HookEvent $event) {
-    if($this->wire->page->template == 'admin') return;
-    $rf = $event->object;
-    $rf->styles()->add(__DIR__."/styles/dark.less");    
+    $this->loadStyle(__DIR__ . "/styles/dark.less");
   }
 }
