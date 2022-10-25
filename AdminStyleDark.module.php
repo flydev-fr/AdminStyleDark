@@ -24,6 +24,6 @@ class AdminStyleDark extends WireData implements Module {
   }
 
   public function ready() {
-    $this->loadStyle(__DIR__ . "/styles/dark.less");
+    $this->loadStyle(__DIR__ . "/style/dark.less");
   }
 }

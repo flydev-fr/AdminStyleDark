@@ -1,1 +1,281 @@
   @import "../../../../wire/modules/AdminTheme/AdminThemeUikit/uikit-pw/styles/rock.less";
+  
+  //
+  // Theme
+  //
+  @global-inverse-color: #121212;
+  @base-heading-color: light;
+  @section-title-color: light;
+  @global-background: #121212;
+  @global-color: rgba(255, 255, 255, 0.8);
+  @global-emphasis-color: #ffffff;
+  @global-link-color: #ffffff;
+  @global-muted-color: rgba(255, 255, 255, 0.685);
+  @global-link-hover-color: rgba(255, 255, 255, 0.9);
+  @global-danger-background: #e84949;
+  @global-muted-background: #1b1b1b;
+  @global-primary-background: #e3bf84; //#DCAD61;
+  @global-secondary-background: #000;
+  @global-success-background: #4BB660;
+  @global-border: rgba(151, 151, 151, 0.247);
+  //
+  // Inverse
+  //
+  
+  /// ???
+
+  //
+  // pw
+  //
+  @pw-body-background: @global-inverse-color;
+
+  //
+  // Page List
+  //
+  @pw-page-list-item-border: @global-muted-color;
+  @pw-page-list-item-open-background: darken(@global-muted-background, 20%);
+  @pw-page-list-item-open-border-color: @global-muted-color;
+  @pw-page-list-link-open-color: @global-muted-color;
+  @pw-page-list-link-color: @global-muted-color;
+  @pw-page-list-action-link-color: @global-muted-background;
+  @pw-page-list-action-link-background-color: @global-primary-background;
+  @pw-page-list-action-link-hover-background-color: darken(@global-primary-background, 10%);
+  @pw-page-list-item-open-border-color: 1px solid lighten(@global-secondary-background, 10%);
+  @pw-page-list-item-border: 1px solid lighten(@global-secondary-background, 10%);
+  @pw-page-list-item-hover-border-color: lighten(@global-secondary-background, 12%);
+  @pw-page-list-icon-color: @global-primary-background;
+  @tab-item-active-background: dark;
+
+  // dropdown menu hardcored class
+  .pw-dropdown-menu, .ui-menu, .ui-menu .ui-menu-item .ui-menu.navJSON {
+    border: 1px solid darken(@global-muted-color, 80%);
+  }
+
+  // jquery-ui panel
+  .pw-panel-content {
+    background: @pw-body-background !important;
+    border-right: 1px solid @global-border !important;
+  }
+  .ui-dialog .ui-dialog-content, .ui-widget-content {
+    background: @global-muted-background;
+    color: @global-color;
+  }
+  .pw-panel-content .ui-icon, .ui-dialog-content .ui-icon {
+    color: @global-primary-background;
+    filter: invert();
+    -webkit-filter: invert();
+  }
+
+  //
+  // Inputfield
+  //
+  @pw-inputfield-border: 1px solid @global-border;
+
+  //
+  // Alert
+  //
+  @alert-background: @global-muted-background;
+  @alert-primary-background: @global-muted-background;
+  @alert-success-background: @global-muted-background;
+  @alert-warning-background: @global-muted-background;
+  @alert-danger-background: @global-muted-background;
+  
+  //
+  // Article
+  //
+  @article-meta-color: rgba(255, 255, 255, 0.8);
+  @article-meta-link-hover-color: #fff;
+
+  //
+  // Base
+  //
+  @base-code-color: @global-primary-background;
+  @base-code-background: lighten(@global-background, 10%);
+  @base-code-padding-horizontal: .3rem;
+  @base-em-color: #fff;
+  @base-ins-background: #262626;
+  @base-ins-color: #fff;
+  @base-mark-background: #262626;
+  @base-mark-color: #fff;
+
+  //
+  // Button
+  //
+  @button-secondary-border: rgba(255, 255, 255, 0.2);
+  @button-secondary-hover-background: @global-muted-background;
+  @button-secondary-hover-color: #fff;
+  @button-secondary-active-color: #fff;
+  @button-disabled-background: #3a3a3a;
+
+  //
+  // Card
+  //
+  @card-hover-background: @global-muted-background;
+  @card-default-background: @global-muted-background;
+  @card-default-hover-background: @global-muted-background;
+  @card-primary-color-mode: #121212;
+  @card-secondary-color: rgba(255, 255, 255, 0.8);
+  @card-secondary-color-mode: none;
+  @card-secondary-hover-background: #161616;
+  @card-secondary-title-color: #fff;
+  
+  //
+  // Dotnav
+  //
+  @dotnav-item-border: rgba(255, 255, 255, 0.4);
+
+  //
+  // Form
+  //
+  @form-focus-color: #fff;
+  @form-range-track-background: @global-muted-background;
+  @form-range-track-focus-background: @global-muted-background;
+  @form-radio-background: @global-muted-background;
+  @form-label-color: #fff;
+
+  //
+  // Heading
+  //
+  @heading-divider-border: rgba(255, 255, 255, 0.08);
+  @heading-line-border: #fff;
+
+
+  //
+  // Nav
+  //
+
+  @nav-default-sublist-item-hover-color: #fff;
+  @nav-primary-sublist-item-hover-color: #fff;
+
+  //
+  // Offcanvas
+  //
+  @offcanvas-bar-color-mode: dark;
+
+  //
+  // Progress
+  //
+  @progress-background: @global-muted-background;
+
+  //
+  // Section
+  //
+  @section-primary-color-mode: @global-background;
+
+  //
+  // Slidenav
+  //
+  @slidenav-background: rgba(255, 255, 255, 0.1);
+  @slidenav-color: #fff;
+  @slidenav-hover-background: rgba(255, 255, 255, 0.2);
+  @slidenav-hover-color: #fff;
+  @slidenav-active-background: rgba(255, 255, 255, 0.3);
+  @slidenav-active-color: #fff;
+
+  //
+  // Tab
+  //
+  @tab-item-hover-border: #fff;
+  @tab-item-hover-color: #fff;
+  @tab-item-active-border: #fff;
+
+  //
+  // Table
+  //
+  @table-header-cell-color: #fff;
+  @table-row-active-background: @global-muted-background;
+
+  //
+  // Text
+  //
+  @text-warning-color: #ffc077;
+  @text-lead-color: #fff;
+
+  //
+  // Tile
+  //
+  @tile-primary-color-mode: #121212;
+
+  //
+  // Utility
+  //
+  @logo-color: #fff;
+  @logo-hover-color: rgba(255, 255, 255, 0.8);
+
+  // admin modules override
+  .InputfieldSelector .selector-row,
+  .InputfieldSelector .selector-row:last-child {
+    border-color: @global-border !important;
+  }
+
+  //
+  // Third party modules override
+  //
+
+  /// Breadcrumbs @robinS
+  .uk-breadcrumb .breadcrumb-dropdown.visible {
+    background-color: @pw-body-background !important;
+    border-color: darken(@global-border, 10%);
+  }
+  .uk-breadcrumb .breadcrumb-dropdown.visible li {
+    border-color: darken(@global-border, 10%);
+  }
+
+  .uk-breadcrumb .breadcrumb-dropdown li .inner-item:not(.add-new .inner-item) {
+    color: @global-muted-color;
+    border-bottom: 1px solid darken(@global-border, 10%);
+  }
+
+  .uk-breadcrumb .breadcrumb-dropdown li a:hover {
+    color: @global-link-hover-color !important;
+    background-color: @pw-body-background !important;
+  }
+  .uk-breadcrumb .breadcrumb-dropdown li a:hover .inner-item {
+    color: @global-link-hover-color;
+  }
+
+  // autocompletemoduleclasses @RobinS
+  #awesomplete_list_1 {
+    background: @pw-body-background !important;
+    border-color: darken(@global-border, 10%);
+    color: @global-muted-color;
+  }
+  #awesomplete_list_1 > ul > li[aria-selected="true"] {
+    color: @global-link-hover-color !important;
+    background-color: @pw-body-background !important;
+  }
+
+  // Selectize @Macrura
+  .Inputfield .selectize-input,
+  .Inputfield .selectize-dropdown {
+    border: 1px solid darken(@global-border, 10%) !important;
+    border-color: darken(@global-border, 10%);
+    z-index: 100;
+  }
+  .Inputfield .selectize-input, .selectize-dropdown {
+    background: @pw-body-background !important;
+    color: @global-muted-color !important;
+  }
+  .Inputfield .selectize-control.multi .selectize-input.has-items>div {
+    background: lighten(@pw-body-background, 20%) !important;
+    color: @global-link-color;
+    border: 1px solid lighten(@global-border, 30%) !important;
+  }
+  .selectize-control.plugin-remove_button [data-value] .remove {
+    border-left: 1px solid lighten(@global-border, 50%) !important;
+    color: @global-primary-background !important;
+  }
+
+  // Simple-MDE
+  .CodeMirror {
+    background-color: @inverse-global-muted-background !important;
+    color: @global-color !important;
+  }
+
+  // selection
+  ::selection {
+    background: hsla(202, 98%, 59%, 0.918);
+    color: @global-color;
+    text-shadow: none;
+  }
+  
