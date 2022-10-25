@@ -214,6 +214,23 @@
   }
 
   //
+  // FontAwesome Icons list (.InputfieldIconAll)
+  //
+  .InputfieldIconAll .fa.fw {
+    background-color: @global-background !important;
+  }
+  .InputfieldIconAll .fa.fw:hover {
+    background: lighten(@global-background, 20%) !important;
+  }
+  .InputfieldIconAll .fa.fw.on {
+    color: @pw-inputfield-color-primary;
+  }
+  .InputfieldIconAll .fa.fw:active::after {
+    background: lighten(@global-background, 20%) !important;
+  }
+
+
+  //
   // Third party modules override
   //
 
