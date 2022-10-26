@@ -1,3 +1,10 @@
+  @import "../../../../wire/modules/AdminTheme/AdminThemeUikit/uikit-pw/styles/rock.less";
+  
+  /// 
+  /// TODO: Known bug(s)
+  /// Input "Admin theme settings (Uikit)" in field properties, tab "input", is white. I think it come from a js call somewhere.
+  ///
+
   //
   // Theme
   //
@@ -16,8 +23,6 @@
   @global-secondary-background: #000;
   @global-success-background: #4BB660;
   @global-border: rgba(151, 151, 151, 0.247);
-
-  
   //
   // Inverse
   //
@@ -28,6 +33,12 @@
   // pw
   //
   @pw-body-background: @global-inverse-color;
+  ///
+  /// Toolip
+  ///
+  @tooltip-background: lighten(@global-primary-background, 16%);
+  @tooltip-color: @global-inverse-color;
+  
 
   //
   // Page List
@@ -209,6 +220,23 @@
   }
 
   //
+  // FontAwesome Icons list (.InputfieldIconAll)
+  //
+  .InputfieldIconAll .fa.fw {
+    background-color: @global-background !important;
+  }
+  .InputfieldIconAll .fa.fw:hover {
+    background: lighten(@global-background, 20%) !important;
+  }
+  .InputfieldIconAll .fa.fw.on {
+    color: @pw-inputfield-color-primary;
+  }
+  .InputfieldIconAll .fa.fw:active::after {
+    background: lighten(@global-background, 20%) !important;
+  }
+
+
+  //
   // Third party modules override
   //
 
@@ -278,3 +306,4 @@
     color: @global-color;
     text-shadow: none;
   }
+  
