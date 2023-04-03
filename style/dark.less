@@ -145,6 +145,11 @@
   @form-label-color: #fff;
 
   //
+  // Select
+  //
+  @form-select-option-color: @global-color;
+
+  //
   // Heading
   //
   @heading-divider-border: rgba(255, 255, 255, 0.08);
@@ -298,6 +303,19 @@
   .CodeMirror {
     background-color: @inverse-global-muted-background !important;
     color: @global-color !important;
+  }
+  .EasyMDEContainer .editor-toolbar > button {
+    background-color: @global-primary-background;
+    color: @global-inverse-color;
+    margin-right: .2rem;
+  }
+  .EasyMDEContainer .editor-preview {
+    background-color: @global-muted-background;
+    color: @global-color;
+  }
+  .EasyMDEContainer .CodeMirror-fullscreen {
+    background: @global-muted-background !important;
+    color: @global-color;
   }
 
   // selection
