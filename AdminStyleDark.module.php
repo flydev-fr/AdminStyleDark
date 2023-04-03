@@ -7,9 +7,11 @@ class AdminStyleDark extends WireData implements Module {
   use AdminStyle;
 
   public static function getModuleInfo() {
+    $package = json_decode(file_get_contents(__DIR__ . "/package.json"));
+    
     return [
       'title' => 'AdminStyleDark',
-      'version' => '1.0.1',
+      'version' => $package->version,
       'summary' => 'Dark Style for AdminThemeUikit',
       'autoload' => true,
       'singular' => true,
