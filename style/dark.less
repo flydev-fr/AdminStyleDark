@@ -294,10 +294,13 @@
   }
 
   .uk-breadcrumb .breadcrumb-dropdown li .inner-item:not(.add-new .inner-item) {
-    color: @global-muted-color;
+    color: darken(@global-muted-color, 10%);
     border-bottom: 1px solid darken(@global-border, 10%);
   }
 
+  .uk-breadcrumb li a {
+    color: darken(@global-muted-color, 20%) !important;
+  }
   .uk-breadcrumb .breadcrumb-dropdown li a:hover {
     color: @global-link-hover-color !important;
     background-color: @pw-body-background !important;
