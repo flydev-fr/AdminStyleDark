@@ -176,6 +176,29 @@
   // Offcanvas
   //
   @offcanvas-bar-color-mode: dark;
+  @offcanvas-bar-background: @global-muted-background;
+  @offcanvas-overlay-background: rgba(0, 0, 0, 0.5);
+  /// adjust the logo of the offcanvas
+  .uk-offcanvas-bar {
+    border-right: 1px solid @global-border;
+  }
+  #offcanvas-nav-header {
+    margin-bottom: .3rem;
+  }
+  #offcanvas-nav-close i {
+    margin-top: 5px !important;
+  }
+  .offcanvas-logo {
+    display: inline;
+    margin-right: .2rem;
+    max-height: 2rem;
+    width: 2rem;
+  }
+  .offcanvas-title {
+    font-weight: 800;
+    font-size: large;
+    font-variant-caps: small-caps;
+  }
 
   //
   // Progress
