@@ -21,7 +21,7 @@
   @global-link-hover-color: rgba(255, 255, 255, 0.9);
   @global-danger-background: #e84949;
   @global-muted-background: #1b1b1b;
-  @global-primary-background: #e3bf84; //#DCAD61;
+  @global-primary-background: #e86a7d;
   @global-secondary-background: #000;
   @global-success-background: #4BB660; 
   @global-border: rgba(151, 151, 151, 0.247);
@@ -176,6 +176,29 @@
   // Offcanvas
   //
   @offcanvas-bar-color-mode: dark;
+  @offcanvas-bar-background: @global-muted-background;
+  @offcanvas-overlay-background: rgba(0, 0, 0, 0.5);
+  /// adjust the logo of the offcanvas
+  .uk-offcanvas-bar {
+    border-right: 1px solid @global-border;
+  }
+  #offcanvas-nav-header {
+    margin-bottom: .3rem;
+  }
+  #offcanvas-nav-close i {
+    margin-top: 5px !important;
+  }
+  .offcanvas-logo {
+    display: inline;
+    margin-right: .2rem;
+    max-height: 2rem;
+    width: 2rem;
+  }
+  .offcanvas-title {
+    font-weight: 800;
+    font-size: large;
+    font-variant-caps: small-caps;
+  }
 
   //
   // Progress
@@ -213,7 +236,7 @@
   //
   // Text
   //
-  @text-warning-color: #ffc077;
+  @text-warning-color: @global-primary-background;
   @text-lead-color: #fff;
 
   //
@@ -233,6 +256,10 @@
     border-color: @global-border !important;
   }
 
+  .InputfieldImageEdit__inner {
+    background-color: @global-background !important;
+  }
+
   //
   // FontAwesome Icons list (.InputfieldIconAll)
   //
@@ -249,6 +276,23 @@
     background: lighten(@global-background, 20%) !important;
   }
 
+  //
+  // Global Backend Overrides
+  //
+
+  .pw-sidebar-nav > li .pw-avatar {
+    display: inline;
+  }
+
+  h1#pw-content-title {
+    display: inline-flex;
+    margin: 0.5rem 0 1.2rem 0 !important;
+    padding: .3rem .6rem;
+    background-color: #202020;
+    color: lighten(@global-primary-background, 5%);
+    font-weight: bold;
+    border-radius: 30px;
+  }
 
   //
   // Third party modules override
@@ -264,10 +308,13 @@
   }
 
   .uk-breadcrumb .breadcrumb-dropdown li .inner-item:not(.add-new .inner-item) {
-    color: @global-muted-color;
+    color: darken(@global-muted-color, 10%);
     border-bottom: 1px solid darken(@global-border, 10%);
   }
 
+  .uk-breadcrumb li a {
+    color: darken(@global-muted-color, 20%) !important;
+  }
   .uk-breadcrumb .breadcrumb-dropdown li a:hover {
     color: @global-link-hover-color !important;
     background-color: @pw-body-background !important;
@@ -285,6 +332,12 @@
   #awesomplete_list_1 > ul > li[aria-selected="true"] {
     color: @global-link-hover-color !important;
     background-color: @pw-body-background !important;
+  }
+
+  // InputfieldTextTags
+  .InputfieldTextTags {
+    position: relative;
+    z-index: 1;
   }
 
   // Selectize @Macrura
