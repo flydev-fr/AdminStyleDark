@@ -21,7 +21,7 @@
   @global-link-hover-color: rgba(255, 255, 255, 0.9);
   @global-danger-background: #e84949;
   @global-muted-background: #1b1b1b;
-  @global-primary-background: #e3bf84; //#DCAD61;
+  @global-primary-background: #e86a7d;
   @global-secondary-background: #000;
   @global-success-background: #4BB660; 
   @global-border: rgba(151, 151, 151, 0.247);
@@ -236,7 +236,7 @@
   //
   // Text
   //
-  @text-warning-color: #ffc077;
+  @text-warning-color: @global-primary-background;
   @text-lead-color: #fff;
 
   //
@@ -254,6 +254,10 @@
   .InputfieldSelector .selector-row,
   .InputfieldSelector .selector-row:last-child {
     border-color: @global-border !important;
+  }
+
+  .InputfieldImageEdit__inner {
+    background-color: @global-background !important;
   }
 
   //
