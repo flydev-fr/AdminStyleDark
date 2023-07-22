@@ -28,6 +28,8 @@ class AdminStyleDark extends WireData implements Module {
   // module init
   public function init() {
     $this->addHookAfter('AdminThemeUikit::renderFile', $this, 'hookRenderFile');
+
+    $this->config->scripts->add($this->config->urls($this) . "AdminStyleDark.js");
   }
 
   public function ready() {
