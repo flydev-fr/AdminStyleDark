@@ -1,3 +1,13 @@
+# [1.1.0](https://github.com/flydev-fr/AdminStyleDark/compare/v1.0.3...v1.1.0) (2023-07-22)
+
+
+### Features
+
+* add `dark` class to body ([d4800cd](https://github.com/flydev-fr/AdminStyleDark/commit/d4800cd906055b46cfd5214994a62c159101244f))
+* **js:** added module js script ([f6a67b2](https://github.com/flydev-fr/AdminStyleDark/commit/f6a67b2d2a0c02545961e086f503319a7bc7ab41))
+
+
+
 ## [1.0.3](https://github.com/flydev-fr/AdminStyleDark/compare/v1.0.2...v1.0.3) (2023-05-29)
 
 
