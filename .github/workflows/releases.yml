@@ -5,28 +5,33 @@ on:
       - main
 
 jobs:
-  changelog:
-    runs-on: ubuntu-latest
-
+  release:
+    runs-on: ubuntu-20.04
     steps:
-      - uses: akhilmhdh/contributors-readme-action@v2.3.6
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout GitHub Action
+        uses: actions/checkout@v3
+               
+      - run: mkdir -p build
+      - name: Generate Contributors Images
+        uses: jaywcjlove/github-action-contributors@main
         with:
-          commit_message: "docs(contributor): readme updated"
+          filter-author: (renovate\[bot\]|renovate-bot|dependabot\[bot\])
+          output: build/CONTRIBUTORS.svg
+          avatarSize: 32
 
-      - uses: actions/checkout@v3
-      - name: conventional Changelog Action
+      - name: Conventional Changelog Action
         id: changelog
-        uses: TriPSs/conventional-changelog-action@v3.18.0
+        uses: TriPSs/conventional-changelog-action@v4
         with:
           github-token: ${{ secrets.github_token }}
 
-      - name: create release
+      - name: Create Release
         uses: actions/create-release@v1
+        # if: ${{ steps.changelog.outputs.skipped == 'false' }}
         env:
           GITHUB_TOKEN: ${{ secrets.github_token }}
         with:
           tag_name: ${{ steps.changelog.outputs.tag }}
           release_name: ${{ steps.changelog.outputs.tag }}
           body: ${{ steps.changelog.outputs.clean_changelog }}
+         
